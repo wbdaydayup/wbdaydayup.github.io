@@ -1,0 +1,661 @@
+.wjs-topBar{
+    border-bottom: 1px solid #ccc;
+}
+.wjs-topBar > .container > .row > div{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+.wjs-topBar > .container > .row > div + div{
+    border-left: 1px solid #ccc;
+}
+.wjs-topBar > .container > .row > div:nth-child(1) a{
+    display: block;
+}
+.wjs-topBar > .container > .row > div a img{
+    display: none;
+    z-index: 998;
+}
+.wjs-topBar > .container > .row > div:nth-child(n+3) a{
+    margin-left: 10px;
+}
+.wjs-topBar > .container > .row > div a:hover img{
+    position: absolute;
+    display: block;
+    margin-left: 50%;
+    left: -60px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.wjs-topBar .btn-register{
+    border: none;
+    background: #e92322;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 12px;
+}
+.wjs-topBar .btn-login{
+    font-size: 12px;
+    color: #666;
+}
+.wjs-topBar .btn-login:hover{
+    text-decoration: none;
+    color: #666;
+}
+@font-face {
+    /*2.申明自己的字体名称*/
+    font-family: 'wjs';
+    /*3.引入字体文件（约束某一段字符代码什么图案）*/
+    src:
+    url(../fonts/MiFie-Web-Font.svg) format('svg'),
+    url(../fonts/MiFie-Web-Font.eot) format('embedded-opentype'),
+    url(../fonts/MiFie-Web-Font.ttf) format('truetype'),
+    url(../fonts/MiFie-Web-Font.woff) format('woff');
+}
+.wjs-icon{
+    font-family: wjs;
+}
+.icon-phone::before{
+    content: "\e908";
+}
+.icon-tel::before{
+    content: "\e909";
+}
+.icon-logo::before{
+    content: "\e920";
+}
+.icon-name::before{
+    content: "\e93e";
+}
+.icon-rmb::before{
+    content: "\e903";
+}
+.icon-clock::before{
+    content: "\e906";
+}
+.icon-video::before{
+    content: "\e905";
+}
+.icon-news01::before {
+    content: "\e90e";
+}
+
+.icon-news02::before {
+    content: "\e90f";
+}
+
+.icon-news03::before {
+    content: "\e910";
+}
+
+.icon-news04::before {
+    content: "\e911";
+}
+.icon-partner01::before {
+    content: "\e946";
+}
+
+.icon-partner02::before {
+    content: "\e92f";
+}
+
+.icon-partner03::before {
+    content: "\e92e";
+}
+
+.icon-partner04::before {
+    content: "\e92a";
+}
+
+.icon-partner05::before {
+    content: "\e929";
+}
+
+.icon-partner06::before {
+    content: "\e931";
+}
+
+.icon-partner07::before {
+    content: "\e92c";
+}
+
+.icon-partner08::before {
+    content: "\e92b";
+}
+
+.icon-partner09::before {
+    content: "\e92d";
+}
+
+.wjs-navbar {
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
+.wjs-navbar .icon-logo{
+    font-size: 50px;
+    color: #e92322;
+    vertical-align: middle;
+}
+.wjs-navbar .icon-name{
+    font-size: 36px;
+    color: #333;
+    vertical-align: middle;
+}
+.wjs-navbar .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs-navbar .navbar-brand:hover,
+.wjs-navbar .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.wjs-navbar .navbar-text {
+    color: #777;
+}
+.wjs-navbar .navbar-nav > li > a {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs-navbar .navbar-nav .active{
+}
+.wjs-navbar .navbar-nav > li > a:hover,
+.wjs-navbar .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 3px solid #E92524;
+}
+.wjs-navbar .navbar-nav > .active > a,
+.wjs-navbar .navbar-nav > .active > a:hover,
+.wjs-navbar .navbar-nav > .active > a:focus {
+    color: #555;
+    border-bottom: 3px solid #E92524;
+}
+.wjs-navbar .navbar-nav > .disabled > a,
+.wjs-navbar .navbar-nav > .disabled > a:hover,
+.wjs-navbar .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.wjs-navbar .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+
+}
+.wjs-navbar .navbar-toggle:hover,
+.wjs-navbar .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.wjs-navbar .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.wjs-navbar .navbar-collapse,
+.wjs-navbar .navbar-form {
+    border-color: #e7e7e7;
+}
+.wjs-navbar .navbar-nav > .open > a,
+.wjs-navbar .navbar-nav > .open > a:hover,
+.wjs-navbar .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .wjs-navbar .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .wjs-navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+    .wjs-navbar .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .wjs-navbar .navbar-nav .open .dropdown-menu > .active > a,
+    .wjs-navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .wjs-navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .wjs-navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+    .wjs-navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .wjs-navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.wjs-navbar .navbar-link {
+    color: #777;
+}
+.wjs-navbar .navbar-link:hover {
+    color: #333;
+}
+.wjs-navbar .btn-link {
+    color: #777;
+}
+.wjs-navbar .btn-link:hover,
+.wjs-navbar .btn-link:focus {
+    color: #333;
+}
+.wjs-navbar .btn-link[disabled]:hover,
+fieldset[disabled] .wjs-navbar .btn-link:hover,
+.wjs-navbar .btn-link[disabled]:focus,
+fieldset[disabled] .wjs-navbar .btn-link:focus {
+    color: #ccc;
+}
+
+.wjs-banner .pcImages{
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wjs-banner .mobileImages{
+    display: block;
+    width: 100%;
+}
+.wjs-banner .mobileImages img{
+    display: block;
+    width: 100%;
+}
+/*控制轮播图左右切换图标不显示，即把content的内容置空覆盖*/
+/*.wjs-banner .glyphicon-chevron-left::before,*/
+/*.wjs-banner .glyphicon-chevron-right::before {*/
+    /*content: "";*/
+/*}*/
+
+.wjs-info{
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+.wjs-info .container{
+    width: 900px;
+}
+/*默认是screen*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    .wjs-info .container{
+        width: 750px;
+    }
+}
+.wjs-info .container>div a{
+    padding: 15px 0;
+    display: block;
+}
+.wjs-info .container div a:hover{
+    color: #E92524;
+}
+.wjs-info .container div a .media span{
+    font-size: 30px;
+}
+
+/*预约模块*/
+/*如果响应式涉及到换行，最好不要使用line-height，因为换行后就会有两个行高了，使用paading不会发送这样的情况*/
+.wjs-book{
+    /*height: 100px;*/
+    /*line-height: 100px;*/
+    padding: 35px 0px;
+    border-bottom: 1px solid #ccc;
+}
+.wjs-book .container{
+    width: 900px;
+}
+@media screen and (max-width: 768px){
+    .wjs-book .container{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .wjs-book .container{
+        width: 750px;
+    }
+}
+.wjs-book .book span,
+.wjs-book .video span{
+    font-size: 20px;
+}
+.wjs-book .book a{
+    color: #E92524;
+    border-bottom: 1px dashed #E92524;
+}
+
+.wjs-product{
+    padding: 20px 0;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+.wjs-product .parent-nav{
+    width: 100%;
+    overflow: hidden;
+}
+.wjs-product .nav-tabs {
+    border-bottom: 1px solid #ddd;
+}
+.wjs-product .nav-tabs > li {
+    float: left;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+.wjs-product .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+}
+.wjs-product .nav-tabs > li > a:hover {
+    background-color: #f5f5f5;
+}
+.wjs-product .nav-tabs > li.active > a,
+.wjs-product .nav-tabs > li.active > a:hover,
+.wjs-product .nav-tabs > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 3px solid #E92524;
+}
+.wjs-product .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.wjs-product .nav-tabs.nav-justified > li {
+    float: none;
+}
+.wjs-product .nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wjs-product .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .wjs-product .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .wjs-product .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.wjs-product .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.wjs-product .nav-tabs.nav-justified > .active > a,
+.wjs-product .nav-tabs.nav-justified > .active > a:hover,
+.wjs-product .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .wjs-product .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .wjs-product .nav-tabs.nav-justified > .active > a,
+    .wjs-product .nav-tabs.nav-justified > .active > a:hover,
+    .wjs-product .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.product-box{
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: 3px 3px 5px #d8d8d8;
+}
+.product-box:hover{
+    color: #666;
+}
+.product-box.active{
+    background-color: #E92524;
+    color: #fff;
+    position: relative;
+}
+.product-box.active::before{
+    content: '\e915';
+    font-family: 'wjs';
+    position: absolute;
+    left: 0;
+    top: -7px;
+    font-size: 33px;
+}
+.product-box .box-right{
+    float: right;
+    width: 80px;
+    height: 150px;
+    text-align: center;
+    border-left: 1px dashed #ccc;
+    position: relative;
+}
+.product-box .box-right .right-tips{
+    position: absolute;
+    width: 100%;
+    top: 10px;
+}
+.product-box .box-right .right-tips span{
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    border-width: 1px;
+    border-style: solid;
+}
+.product-box .box-right .right-tips span:first-of-type{
+    color: red;
+    border-color: red;
+}
+.product-box .box-right .right-tips span:last-of-type{
+    color: green;
+    border-color: green;
+}
+.product-box .box-right::before,
+.product-box .box-right::after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    left: -6px;
+}
+.product-box .box-right::before{
+    top: -6px;
+    box-shadow: 0 -2px 3px #d8d8d8 inset;
+}
+.product-box .box-right::after{
+    bottom: -6px;
+    box-shadow: 0 2px 3px #d8d8d8 inset;
+}
+.product-box .box-right p:first-of-type{
+    color: #E92524;
+    margin-top: 25px;
+}
+.product-box .box-right p:first-of-type sub{
+    bottom: 0;
+    font-size: 12px;
+}
+.product-box.active .box-right p:first-of-type{
+    color: #fff;
+}
+.product-box .box-right p:first-of-type b{
+    font-size: 48px;
+}
+.product-box .box-left {
+    /*触发了bfc机制使得两个块级元素同一行显示*/
+    overflow: hidden;
+}
+.product-box .box-left h3{
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+.product-box .box-left div{
+    font-size: 12px;
+}
+
+/*新闻模块*/
+.wjs-news{
+    padding: 40px 0;
+    border-bottom: 1px solid #ccc;
+}
+.wjs-news .news-title{
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    position: relative;
+}
+.wjs-news .news-title::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    bottom: -3px;
+    right: -6px;
+}
+
+.wjs-news .nav-tabs {
+    border-bottom: none;
+    width: 65px !important;
+}
+.wjs-news .news-line{
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    border-left: 1px dashed #ccc;
+    left: 45px;
+    top: 0;
+}
+.wjs-news .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.wjs-news .nav-tabs > li > a {
+    margin-right: 0;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    background-color: #ccc;
+    border-radius:50%;
+    margin-bottom: 60px;
+    border:none;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+.wjs-news .news-content{
+    list-style: none;
+}
+.wjs-news .news-content li a{
+    display: block;
+    padding: 15px 0;
+    color: #666;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .wjs-news .nav-tabs {
+        width: 690px !important;
+    }
+    .wjs-news .nav-tabs > li > a{
+        margin: 30px 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wjs-news .nav-tabs {
+        width: 100% !important;
+    }
+    .wjs-news .nav-tabs > li{
+        width: 25%;
+    }
+    .wjs-news .nav-tabs > li > a{
+        margin: 0 auto;
+    }
+}
+.wjs-news .nav-tabs > li:last-of-type > a{
+    margin-bottom: 0;
+}
+.wjs-news .nav-tabs > li > a:hover {
+}
+.wjs-news .nav-tabs > li.active > a,
+.wjs-news .nav-tabs > li.active > a:hover,
+.wjs-news .nav-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    border: none;
+    background-color: #E92524;
+}
+.wjs-news .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.wjs-news .nav-tabs.nav-justified > li {
+    float: none;
+}
+.wjs-news .nav-tabs.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wjs-news .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .wjs-news .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .wjs-news .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.wjs-news .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.wjs-news .nav-tabs.nav-justified > .active > a,
+.wjs-news .nav-tabs.nav-justified > .active > a:hover,
+.wjs-news .nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .wjs-news .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .wjs-news .nav-tabs.nav-justified > .active > a,
+    .wjs-news .nav-tabs.nav-justified > .active > a:hover,
+    .wjs-news .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+
+/*合作伙伴模块*/
+.wjs-partner .container{
+}
+.wjs-partner ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.wjs-partner ul li{
+    display: inline-block;
+}
+.wjs-partner ul li a{
+    font-size: 70px;
+    padding: 0 15px;
+    display: block;
+}
